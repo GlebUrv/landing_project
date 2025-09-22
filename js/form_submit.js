@@ -10,14 +10,17 @@ document.addEventListener("submit", async function (e) {
     console.log("📤 Отправляемые данные:", data);
 
     try {
-      // Заменить тестовый сервер https://httpbin.org/post на реальный URL
-      const response = await fetch("https://httpbin.org/post", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      // Заменить тестовый сервер https://jsonplaceholder.typicode.com/posts на реальный URL
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await response.json();
       console.log("✅ Тестовый ответ:", result);
