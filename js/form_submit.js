@@ -22,6 +22,10 @@ document.addEventListener("submit", async function (e) {
       const result = await response.json();
       console.log("✅ Тестовый ответ:", result);
 
+      if (result) {
+        alert("✅ Order sent.");
+      }
+
       form.reset();
     } catch (error) {
       console.error("❌ Ошибка:", error);
