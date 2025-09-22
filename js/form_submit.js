@@ -23,7 +23,9 @@ document.addEventListener("submit", async function (e) {
       console.log("✅ Тестовый ответ:", result);
 
       if (result) {
-        alert("✅ Order sent.");
+        alert(
+          `✅ Order sent. Received.data: name: ${data.name}, phone: ${data.phone}`
+        );
       }
 
       form.reset();
